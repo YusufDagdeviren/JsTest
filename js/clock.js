@@ -2,7 +2,7 @@ let userName = prompt("Adınızı Yazınız")
     if(userName != null){
         document.querySelector("#myName").innerHTML +=userName;
     }
-currentTime = () =>{
+showTime = () =>{
     let date = new Date(); 
     let hh = date.getHours();
     let mm = date.getMinutes();
@@ -39,8 +39,8 @@ currentTime = () =>{
         text="Pazar";
     }
     document.querySelector("#myClock>#clock").innerHTML = `${time} ${text}`; 
-    let t = setTimeout(function(){ currentTime() }, 1000);
+    let t = setTimeout(function(){ showTime() }, 1000);
   }
-currentTime();
+showTime();
 
   
